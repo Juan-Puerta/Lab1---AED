@@ -4,15 +4,15 @@ public class Polynomial {
 
 	private int grade;
 	private double[] constant;
-	
+
 	private BairstowMethod theBairstow;
 	private NewtonMethod theNewton;
-	
+
 	public Polynomial(double[] constant) {
-		
+
 		this.constant = constant;
 		this.grade = constant.length;
-		
+
 	}
 
 	public int getGrade() {
