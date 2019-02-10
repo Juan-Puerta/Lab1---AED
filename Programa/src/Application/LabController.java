@@ -18,10 +18,15 @@ public class LabController {
 	}
 	
 	public void solve() {
-		
+		show("solve");
 	}
 	
 	public void generate() {
-		
+		show("generate");
+	}
+	
+	public void show(String value) {
+		TASolution.setText(value+'\n');
+		System.out.println(value);
 	}
 }
