@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interface.LabController">
+   <children>
+      <Label alignment="CENTER" layoutX="112.0" layoutY="14.0" prefHeight="54.0" prefWidth="390.0" text="POLYNOMIAL ROOTS">
+         <font>
+            <Font name="Britannic Bold" size="29.0" />
+         </font>
+      </Label>
+      <Separator layoutX="20.0" layoutY="67.0" prefHeight="5.0" prefWidth="563.0" />
+      <Label layoutX="20.0" layoutY="96.0" prefHeight="44.0" prefWidth="246.0" text="Polynomial to solve">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TFInput" layoutX="232.0" layoutY="96.0" prefHeight="44.0" prefWidth="343.0" />
+      <Button fx:id="BGenerate" layoutX="24.0" layoutY="244.0" mnemonicParsing="false" onAction="#generate" prefHeight="44.0" prefWidth="201.0" text="Generate Polynomial">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="TFGenerated" layoutX="236.0" layoutY="244.0" prefHeight="44.0" prefWidth="343.0" />
+      <Label layoutX="45.0" layoutY="312.0" prefHeight="44.0" prefWidth="87.0" text="Solution">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TFValueX" layoutX="237.0" layoutY="312.0" prefHeight="44.0" prefWidth="335.0" />
+      <Label layoutX="182.0" layoutY="312.0" prefHeight="44.0" prefWidth="37.0" text="X:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="BSolve" layoutX="182.0" layoutY="159.0" mnemonicParsing="false" onAction="#solve" prefHeight="44.0" prefWidth="234.0" text="SOLVE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="TASolution" layoutX="24.0" layoutY="384.0" prefHeight="206.0" prefWidth="555.0" />
+   </children>
+</Pane>
