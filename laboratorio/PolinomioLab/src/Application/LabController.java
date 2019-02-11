@@ -37,7 +37,7 @@ public class LabController {
 	}
 	
 	/**
-	 * this method show the process in a text area
+	 * this method show the process step-by-step in a text area
 	 */
 	public void show(String value) {
 				
