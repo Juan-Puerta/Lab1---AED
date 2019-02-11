@@ -15,6 +15,7 @@ public class LabController {
 	@FXML private TextArea TASolution;
 	
 	public void initialize() {
+		TASolution.setText("\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+" STEP-BY-STEP SOLUTIONS "+'\n');
 		TFGenerated.setEditable(false);
 		TASolution.setEditable(false);
 		TFValueX.setEditable(false);
@@ -24,7 +25,8 @@ public class LabController {
 	 * this method solve the problem, it call method in the model
 	 */
 	public void solve() {
-		
+	
+		TFInput.setText(TFInput.getText().toUpperCase());
 	}
 	
 	/**
