@@ -3,6 +3,7 @@ package Application;
 import java.awt.ActiveEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -19,7 +20,7 @@ public class LabController {
 	@FXML private Button BGenerate;
 	@FXML private TextArea TASolution;
 	
-	
+	private static Main main;
 	
 	public void initialize() {
 		TASolution.setText("\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+" STEP-BY-STEP SOLUTIONS "+'\n');
@@ -31,16 +32,23 @@ public class LabController {
 	/**
 	 * this method solve the problem, it call method in the model
 	 */
-	public void solve() {
-	
-		TFInput.setText(TFInput.getText().toUpperCase());
+	public  void solve() {
+		double[] solution = main.foundRoots(TFInput.getText());
+		DecimalFormat df = new DecimalFormat("#0.000");
+		for (int i = 0; i < solution.length; i++) {
+			TFValueX.setText(df.format(solution[i])+""+'\t');
+		}
 	}
 	
 	/**
 	 * this method generate a polynomial with grade n and n values
 	 */
 	public void generate() {
-		
+		double[] random = main.randomPolynomial();
+		 DecimalFormat df = new DecimalFormat("#0.000");
+		for (int i = 0; i < random.length; i++) {
+			TFValueX.setText(df.format(random[i])+""+'\t');
+		}
 	}
 	
 	/**
@@ -50,53 +58,28 @@ public class LabController {
 				
 	}
 
-	public TextField getTFInput() {
-		return TFInput;
-	}
+	
 
 	public void setTFInput(TextField tFInput) {
 		TFInput = tFInput;
+	}
+
+	public TextField getTFInput() {
+		return TFInput;
 	}
 
 	public TextField getTFGenerated() {
 		return TFGenerated;
 	}
 
-	public void setTFGenerated(TextField tFGenerated) {
-		TFGenerated = tFGenerated;
-	}
-
 	public TextField getTFValueX() {
 		return TFValueX;
 	}
+	
+	
 
-	public void setTFValueX(TextField tFValueX) {
-		TFValueX = tFValueX;
-	}
 
-	public Button getBsolve() {
-		return Bsolve;
-	}
 
-	public void setBsolve(Button bsolve) {
-		Bsolve = bsolve;
-	}
-
-	public Button getBGenerate() {
-		return BGenerate;
-	}
-
-	public void setBGenerate(Button bGenerate) {
-		BGenerate = bGenerate;
-	}
-
-	public TextArea getTASolution() {
-		return TASolution;
-	}
-
-	public void setTASolution(TextArea tASolution) {
-		TASolution = tASolution;
-	}
 
 	
 		
