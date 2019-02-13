@@ -10,9 +10,8 @@ import model.Polynomial;
 public class Main extends Application {
 
 	private Polynomial polynomial;
-	private LabController controller;
+	private static LabController controller;
 	public Main() {
-//		setPolynomial(new Polynomial(constant));
 		controller = new LabController();
 	}
 	
@@ -42,7 +41,7 @@ public class Main extends Application {
 	}
 	
 	
-	public void randomPolynomial() {
+	public static double[] randomPolynomial() {
 		int n = (int) (Math.random()*10) + 1;
 		double[] random = new double[n];
 		
@@ -52,19 +51,19 @@ public class Main extends Application {
 		Polynomial p1 = new Polynomial(random);
 		//resolver random
 		double[] roots = p1.getTheBairstow().Bairstow(random);
+		return roots;
 		}
 	
 	
 	
-	public void foundRoots() {
-		String [] stringConstant = controller.getTFInput().getText().split(" ");
+	public static double[] foundRoots(String input) {
+		String [] stringConstant = input.split(" ");
 		double[] doubleConstant = new double[stringConstant.length];
 		for(int i=stringConstant.length-1;i>=0;i--) {
 			doubleConstant[i] = Double.parseDouble(stringConstant[i]);
 		}
 		Polynomial p1 = new Polynomial(doubleConstant);
-		//Estas raices se pasan al txt
 		double[] roots = p1.getTheBairstow().Bairstow(doubleConstant);
-		
+		return roots;
 	}
 }
