@@ -57,7 +57,19 @@ public class Main extends Application {
 	
 	
 	public static double[] foundRoots(String input) {
-		String [] stringConstant = input.split(" ");
+		String a = " ";
+		String b = a+input;
+		char control = '^';
+		char[] numbers = b.toCharArray();
+		String n = "";
+		for (int j = 0; j < numbers.length; j++) {
+			if(Character.isDigit(numbers[j])) {
+				if(numbers[j-1]!=control) 
+					n+=numbers[j]+" ";	
+			}
+		}
+		System.out.println(n);
+		String [] stringConstant = n.split(" ");
 		double[] doubleConstant = new double[stringConstant.length];
 		for(int i=stringConstant.length-1;i>=0;i--) {
 			doubleConstant[i] = Double.parseDouble(stringConstant[i]);
