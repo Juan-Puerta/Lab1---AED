@@ -1,5 +1,10 @@
 package Application;
 
+import java.awt.ActiveEvent;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -13,6 +18,8 @@ public class LabController {
 	@FXML private Button Bsolve;
 	@FXML private Button BGenerate;
 	@FXML private TextArea TASolution;
+	
+	
 	
 	public void initialize() {
 		TASolution.setText("\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+" STEP-BY-STEP SOLUTIONS "+'\n');
@@ -42,6 +49,56 @@ public class LabController {
 	public void show(String value) {
 				
 	}
+
+	public TextField getTFInput() {
+		return TFInput;
+	}
+
+	public void setTFInput(TextField tFInput) {
+		TFInput = tFInput;
+	}
+
+	public TextField getTFGenerated() {
+		return TFGenerated;
+	}
+
+	public void setTFGenerated(TextField tFGenerated) {
+		TFGenerated = tFGenerated;
+	}
+
+	public TextField getTFValueX() {
+		return TFValueX;
+	}
+
+	public void setTFValueX(TextField tFValueX) {
+		TFValueX = tFValueX;
+	}
+
+	public Button getBsolve() {
+		return Bsolve;
+	}
+
+	public void setBsolve(Button bsolve) {
+		Bsolve = bsolve;
+	}
+
+	public Button getBGenerate() {
+		return BGenerate;
+	}
+
+	public void setBGenerate(Button bGenerate) {
+		BGenerate = bGenerate;
+	}
+
+	public TextArea getTASolution() {
+		return TASolution;
+	}
+
+	public void setTASolution(TextArea tASolution) {
+		TASolution = tASolution;
+	}
+
+	
 		
 
 }
