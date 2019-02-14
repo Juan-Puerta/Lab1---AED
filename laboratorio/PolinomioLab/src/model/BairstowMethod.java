@@ -1,10 +1,8 @@
 package model;
 
 public class BairstowMethod {
-
-	public BairstowMethod() {
-
-	}
+ 
+	public BairstowMethod() {}
 
 	public static double[] Bairstow(double a[]) {
 		double r = -1;

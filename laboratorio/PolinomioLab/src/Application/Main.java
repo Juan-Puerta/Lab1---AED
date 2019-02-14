@@ -9,7 +9,7 @@ import model.Polynomial;
 
 public class Main extends Application {
 
-	private Polynomial polynomial;
+//	private Polynomial polynomial;
 	private static LabController controller;
 	public Main() {
 		controller = new LabController();
@@ -28,13 +28,13 @@ public class Main extends Application {
 		}
 	}
 	
-	public Polynomial getPolynomial() {
-		return polynomial;
-	}
+//	public Polynomial getPolynomial() {
+//		return polynomial;
+//	}
 
-	public void setPolynomial(Polynomial polynomial) {
-		this.polynomial = polynomial;
-	}
+//	public void setPolynomial(Polynomial polynomial) {
+//		this.polynomial = polynomial;
+//	}
 
 	public static void main(String[] args) {
 		launch(args);
@@ -44,10 +44,12 @@ public class Main extends Application {
 	public static double[] randomPolynomial() {
 		int n = (int) (Math.random()*10) + 1;
 		double[] random = new double[n];
-		
-		for(int i=0; i<n;i++) {
+//		String constantValues = "";
+		for(int i=random.length-1; i>=0;i--) {
 			random[i] = (double) (Math.random()*50) + 1;
-			}
+//			constantValues += ""+random[i]+" "; 
+		}
+//		controller.getTFGenerated().setText(constantValues);
 		Polynomial p1 = new Polynomial(random);
 		//resolver random
 		double[] roots = p1.getTheBairstow().Bairstow(random);
@@ -71,11 +73,12 @@ public class Main extends Application {
 		System.out.println(n);
 		String [] stringConstant = n.split(" ");
 		double[] doubleConstant = new double[stringConstant.length];
-		for(int i=stringConstant.length-1;i>=0;i--) {
-			doubleConstant[i] = Double.parseDouble(stringConstant[i]);
+		for(int i=doubleConstant.length-1;i>=0;i--) {
+			doubleConstant[i] = Double.parseDouble(stringConstant[doubleConstant.length-1-i]);
 		}
 		Polynomial p1 = new Polynomial(doubleConstant);
 		double[] roots = p1.getTheBairstow().Bairstow(doubleConstant);
+
 		return roots;
 	}
 }

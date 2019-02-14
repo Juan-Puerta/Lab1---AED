@@ -34,10 +34,13 @@ public class LabController {
 	 */
 	public  void solve() {
 		double[] solution = main.foundRoots(TFInput.getText());
-		DecimalFormat df = new DecimalFormat("#0.000");
-		for (int i = 0; i < solution.length; i++) {
-			TFValueX.setText(df.format(solution[i])+""+'\t');
+		DecimalFormat df = new DecimalFormat("(#0.00)");
+		String roots = "";
+		for (int i = 1; i < solution.length; i++) {
+			roots += df.format(solution[i])+""+'\t'+" ";
+			//TFValueX.setText(df.format(solution[i])+""+'\t');
 		}
+		TFValueX.setText(roots);
 	}
 	
 	/**
@@ -45,10 +48,13 @@ public class LabController {
 	 */
 	public void generate() {
 		double[] random = main.randomPolynomial();
-		 DecimalFormat df = new DecimalFormat("#0.000");
-		for (int i = 0; i < random.length; i++) {
-			TFValueX.setText(df.format(random[i])+""+'\t');
+		DecimalFormat df = new DecimalFormat("(#0.00)");
+		String roots = "";
+		for (int i = 1; i < random.length; i++) {
+			roots +=  df.format(random[i])+""+'\t'+" ";
+//			TFValueX.setText(df.format(random[i])+""+'\t');
 		}
+		TFValueX.setText(roots);
 	}
 	
 	/**
