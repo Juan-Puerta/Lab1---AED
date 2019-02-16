@@ -12,6 +12,9 @@ public class Polynomial {
 
 		this.constant = constant;
 		this.grade = constant.length;
+		
+		theBairstow = new BairstowMethod();
+		theNewton = new NewtonMethod();
 
 	}
 

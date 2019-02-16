@@ -3,15 +3,13 @@ package model;
 public class NewtonMethod {
 
 	double p,tol;
-	double a[];
 	
-	NewtonMethod(double[] a1, double x0_1, double tol_1){
-		p = x0_1;
-		a = a1;
-		tol = tol_1;
+	NewtonMethod(){
+		p = -2;
+		tol = 1e-5;
 	}
 	
-	public double solveRoots(){
+	public double solveRoots(double[] a){
 		Horner h=new Horner(a);
 		double f=1, d;
 		while(f>tol){
