@@ -67,12 +67,7 @@ public class Main extends Application {
 				}
 			}
 		}
-		for(char temp : numbers) {
-			System.out.print(temp);
-		}
-		System.out.println("");
-		System.out.println("lo que recibe n: "+n);
-		System.out.println("");
+		
 		String [] stringConstant = n.split(" ");
 		for(String temp : stringConstant) {
 			System.out.print(temp+" ");

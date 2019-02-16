@@ -18,14 +18,13 @@ public class LabController {
 	@FXML private TextField TFValueX;
 	@FXML private Button Bsolve;
 	@FXML private Button BGenerate;
-	@FXML private TextArea TASolution;
+	@FXML private Button BClear;
+	
 	
 	private static Main main;
 	
 	public void initialize() {
-		TASolution.setText("\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+" STEP-BY-STEP SOLUTIONS "+'\n');
 		TFGenerated.setEditable(false);
-		TASolution.setEditable(false);
 		TFValueX.setEditable(false);
 	}
 	
@@ -53,16 +52,14 @@ public class LabController {
 		String roots = "";
 		for (int i = 1; i < random.length; i++) {
 			roots +=  df.format(random[i])+""+'\t'+" ";
-//			TFValueX.setText(df.format(random[i])+""+'\t');
 		}
 		TFValueX.setText(roots);
 	}
 	
-	/**
-	 * this method show the process step-by-step in a text area
-	 */
-	public void show(String value) {
-				
+	public void clear() {
+		TFInput.setText("");
+		TFValueX.setText("");
+		TFGenerated.setText("");
 	}
 
 	
