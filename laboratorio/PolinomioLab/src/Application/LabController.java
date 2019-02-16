@@ -37,7 +37,6 @@ public class LabController {
 		String roots = "";
 		for (int i = 1; i < solution.length; i++) {
 			roots += df.format(solution[i])+""+'\t'+" ";
-			//TFValueX.setText(df.format(solution[i])+""+'\t');
 		}
 		roots.substring(0, 1);
 		TFValueX.setText(roots);

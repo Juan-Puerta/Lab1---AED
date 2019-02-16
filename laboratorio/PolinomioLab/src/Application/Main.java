@@ -69,9 +69,7 @@ public class Main extends Application {
 		}
 		
 		String [] stringConstant = n.split(" ");
-		for(String temp : stringConstant) {
-			System.out.print(temp+" ");
-		}
+		
 		double[] doubleConstant = new double[stringConstant.length];
 		for(int i=doubleConstant.length-1;i>=0;i--) {
 			doubleConstant[i] = Double.parseDouble(stringConstant[doubleConstant.length-1-i]);
