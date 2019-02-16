@@ -40,6 +40,7 @@ public class LabController {
 			roots += df.format(solution[i])+""+'\t'+" ";
 			//TFValueX.setText(df.format(solution[i])+""+'\t');
 		}
+		roots.substring(0, 1);
 		TFValueX.setText(roots);
 	}
 	

@@ -95,7 +95,8 @@ public class BairstowMethod {
 			re[n - 1] = r / 2.0;
 			re[n - 2] = re[n - 1];
 			im[n - 1] = Math.sqrt(-d) / 2.0;
-			im[n - 2] = -im[n - 1];
+			im[n - 2] = -im[n - 1]; 
+
 		}
 	}
 
